@@ -15,6 +15,7 @@ import {
   Star,
   ChevronDown,
 } from 'lucide-react'
+import Logo from '../components/Logo'
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -84,7 +85,7 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-primary-600">Aiveen Labs</h1>
+              <Logo />
             </div>
             
             <div className="hidden md:flex space-x-8">
@@ -130,8 +131,9 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 hero-gradient">
-        <div className="container-custom section-padding">
+      <section id="home" className="relative pt-20 pb-16 hero-background">
+        <div className="hero-overlay"></div>
+        <div className="relative z-10 container-custom section-padding">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -464,7 +466,7 @@ export default function HomePage() {
               Specialized healthcare technology solutions with Java, AWS, and modern frontend expertise
             </p>
             <div className="flex justify-center space-x-6 mb-8">
-              <a href="#" className="text-neutral-400 hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/aiveen-labs/posts/?feedView=all" className="text-neutral-400 hover:text-white transition-colors">LinkedIn</a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">Twitter</a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">GitHub</a>
             </div>
