@@ -14,15 +14,17 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-0;
+    @apply px-6 py-3 rounded-md font-semibold text-white transition-all duration-300;
+    @apply bg-primary-600 hover:bg-primary-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-neutral-50 text-primary-600 font-semibold py-3 px-6 rounded-lg border-2 border-primary-600 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg;
+    @apply px-6 py-3 rounded-md font-semibold transition-all duration-300;
+    @apply bg-transparent border-2 border-primary-600 text-primary-600 hover:bg-primary-50;
   }
   
   .btn-accent {
-    @apply bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 hover:to-gold-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-0;
+    @apply bg-gradient-to-r from-secondary-600 to-secondary-500 hover:from-secondary-700 hover:to-secondary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-0;
   }
   
   .section-padding {
@@ -34,7 +36,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-gold-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
   }
   
   .card-hover {
@@ -46,20 +48,10 @@
   }
 
   .hero-background {
-    background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba9996a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-image: url('/medical-bg.jpg');
     background-size: cover;
     background-position: center;
-    position: relative;
-  }
-
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(240, 253, 250, 0.85); /* Light teal from primary palette */
-    backdrop-filter: blur(3px);
+    background-repeat: no-repeat;
   }
   
   .service-card {
@@ -67,6 +59,12 @@
   }
   
   .testimonial-card {
-    @apply bg-gradient-to-br from-neutral-50 to-gold-50 p-6 rounded-xl border border-gold-100;
+    @apply bg-gradient-to-br from-neutral-50 to-primary-100 p-8 rounded-xl shadow-lg border border-primary-200/50;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-neutral-800;
   }
 } 

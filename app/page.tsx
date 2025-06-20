@@ -132,9 +132,8 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section id="home" className="relative pt-20 pb-16 hero-background">
-        <div className="hero-overlay"></div>
         <div className="relative z-10 container-custom section-padding">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="lg:w-1/2 lg:ml-auto text-center lg:text-right">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -149,7 +148,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto"
+              className="text-xl text-white mb-8"
             >
               Aiveen Labs specializes in Java development, AWS cloud solutions, and modern frontend technologies 
               to deliver innovative healthcare software that improves patient care and operational efficiency.
@@ -159,7 +158,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end"
             >
               <button 
                 onClick={() => scrollToSection('contact')}
@@ -301,10 +300,10 @@ export default function HomePage() {
                 
                 <div className="flex justify-between items-center">
                   <span className="text-neutral-700">Healthcare Solutions</span>
-                  <span className="text-gold-600 font-semibold">92%</span>
+                  <span className="text-secondary-600 font-semibold">92%</span>
                 </div>
                 <div className="w-full bg-neutral-200 rounded-full h-2">
-                  <div className="bg-gold-600 h-2 rounded-full" style={{ width: '92%' }}></div>
+                  <div className="bg-secondary-600 h-2 rounded-full" style={{ width: '92%' }}></div>
                 </div>
               </div>
             </motion.div>
@@ -317,7 +316,9 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">Healthcare Leaders Trust Us</h2>
-            <p className="text-xl text-neutral-600">Serving medical practices and healthcare organizations across the USA</p>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+              Serving medical practices and healthcare organizations across the USA
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -332,7 +333,7 @@ export default function HomePage() {
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-gold-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-secondary-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-neutral-600 mb-4 italic">"{testimonial.content}"</p>
@@ -447,7 +448,7 @@ export default function HomePage() {
                 
                 <button
                   type="submit"
-                  className="w-full bg-white text-primary-600 font-semibold py-3 px-6 rounded-lg hover:bg-gold-100 transition-colors"
+                  className="w-full bg-white text-primary-600 font-semibold py-3 px-6 rounded-lg hover:bg-secondary-100 transition-colors"
                 >
                   Start Your Healthcare Project
                 </button>
