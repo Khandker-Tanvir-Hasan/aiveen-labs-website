@@ -4,7 +4,7 @@ const Logo = ({ className = 'h-10 w-auto' }: { className?: string }) => {
   return (
     <svg 
       className={className} 
-      viewBox="0 0 180 50" 
+      viewBox="0 0 250 50" 
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Aiveen Labs Logo"
     >
@@ -37,10 +37,10 @@ const Logo = ({ className = 'h-10 w-auto' }: { className?: string }) => {
       </g>
 
       <text 
-        x="90" 
+        x="105" 
         y="35" 
         fontFamily="sans-serif" 
-        fontSize="24" 
+        fontSize="22" 
         fill="#075985" // primary-800
         fontWeight="bold"
       >
