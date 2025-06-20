@@ -4,7 +4,9 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  }
+  },
+  basePath: '/aiveen-labs-website',
+  assetPrefix: '/aiveen-labs-website',
 }
 
 module.exports = nextConfig 
